@@ -151,7 +151,7 @@ EOF  all  create  destroy  help  quit  show  update
 ```
 
 ## Bugs
-No known bugs at this time. Yet bugs are tricky. There may be some bugs along the way. Some rise when others fall. While others fall together. 
+No known bugs at this time. Yet bugs are tricky. There may be some bugs along the way. Some rise when others fall. 
 
 ## Authors
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
