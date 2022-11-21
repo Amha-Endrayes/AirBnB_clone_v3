@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""places Module"""
+"""A module to handel places"""
 from api.v1.views import app_views
 from models import storage
 from models.place import Place
@@ -8,7 +8,7 @@ from models.user import User
 from flask import abort, jsonify, request
 
 
-@app_views.route('/cities/<city_id>/places', methods=['GET'],
+@app_views.route('/api/v1/cities/<city_id>/places', methods=['GET'],
                  strict_slashes=False)
 def places(city_id):
     """gets list of places"""
@@ -21,7 +21,8 @@ def places(city_id):
     return jsonify(places_list)
 
 
-@app_views.route('/places/<place_id>', methods=['GET'], strict_slashes=False)
+@app_views.route('/api/v1/places/<place_id>',
+                 methods=['GET'], strict_slashes=False)
 def place_by_id(place_id):
     """gets places by id"""
     place = storage.get(Place, place_id)
@@ -30,7 +31,7 @@ def place_by_id(place_id):
     return jsonify(place.to_dict())
 
 
-@app_views.route('/places/<place_id>', methods=['DELETE'],
+@app_views.route('/api/v1/places/<place_id>', methods=['DELETE'],
                  strict_slashes=False)
 def delete_place(place_id):
     """Deletes a Place object"""
@@ -42,8 +43,8 @@ def delete_place(place_id):
     return jsonify({}), 200
 
 
-@app_views.route('/cities/<city_id>/places', methods=['POST'],
-                 strict_slashes=False)
+@app_views.route('/api/v1/cities/<city_id>/places',
+                 methods=['POST'], strict_slashes=False)
 def create_place(city_id):
     """Creates a Place"""
     city = storage.get(City, city_id)
@@ -68,7 +69,8 @@ def create_place(city_id):
     return jsonify(place.to_dict()), 201
 
 
-@app_views.route('/places/<place_id>', methods=['PUT'], strict_slashes=False)
+@app_views.route('/api/v1/places/<place_id>',
+                 methods=['PUT'], strict_slashes=False)
 def update_place(place_id):
     """Updates a Place object"""
     request_dict = request.get_json()
