@@ -159,7 +159,7 @@ Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://tw
 
 ## Contributers
 Amha Endrayes - [Github](https://github.com/Amha-Endrayes) / [Twitter](https://twitter.com/AmhaEndrayes)  
-Helina Gebreyes - [Github](https://github.com/helinaabye) / [Twitter](https://twitter.com/coderette)  
+Helina Gebreyes - [Github](https://github.com/helinaabye) / [Twitter](https://twitter.com/coderette_)  
 
 Second part of Airbnb: Joann Vuong
 ## License
